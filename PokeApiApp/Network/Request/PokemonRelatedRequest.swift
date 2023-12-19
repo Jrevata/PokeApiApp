@@ -17,6 +17,8 @@ struct PokemonRelatedRequest: RequestObject {
     
     init(url: String) {
         path = url
+        headers["Authorization"] = AuthToken.getAccessToken()
+        headers["Refresh-token"] = AuthToken.getRefreshToken()
     }
     
     

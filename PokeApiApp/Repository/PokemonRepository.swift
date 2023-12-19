@@ -56,6 +56,7 @@ extension PokemonRepository: PokemonRepositoryProtocol {
     }
     
     func getPokemonRelated(url: String, completion: @escaping(Swift.Result<[PokemonModel], Error>) -> Void) {
+        
         dataSource.getPokemonRelated(request: PokemonRelatedRequest(url: url)) { result in
             switch result {
             case .success(let data):
@@ -68,5 +69,6 @@ extension PokemonRepository: PokemonRepositoryProtocol {
             
         }
     }
+    
     
 }

@@ -16,7 +16,8 @@ struct PokemonListRequest: RequestObject {
     var parameters: Parameters = [:]
     
     init() {
-        
+        headers["Authorization"] = AuthToken.getAccessToken()
+        headers["Refresh-token"] = AuthToken.getRefreshToken()
     }
     
     

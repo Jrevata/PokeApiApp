@@ -42,6 +42,11 @@
 		17B7D9502B3165AD0014EDB9 /* PokemonRelatedEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B7D94F2B3165AD0014EDB9 /* PokemonRelatedEntity.swift */; };
 		17B7D9522B3167260014EDB9 /* PokemonRelatedRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B7D9512B3167260014EDB9 /* PokemonRelatedRequest.swift */; };
 		17B7D9552B316CE50014EDB9 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 17B7D9542B316CE50014EDB9 /* SDWebImage */; };
+		17B7D9582B317B880014EDB9 /* AuthToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B7D9572B317B880014EDB9 /* AuthToken.swift */; };
+		17B7D95A2B317F090014EDB9 /* JailbrokenDetection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B7D9592B317F090014EDB9 /* JailbrokenDetection.swift */; };
+		17B7D95C2B3180F50014EDB9 /* Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B7D95B2B3180F50014EDB9 /* Crypto.swift */; };
+		17B7D95F2B31812F0014EDB9 /* CryptoSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 17B7D95E2B31812F0014EDB9 /* CryptoSwift */; };
+		17B7D9612B31823D0014EDB9 /* AuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B7D9602B31823D0014EDB9 /* AuthRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +104,10 @@
 		17B7D94D2B3151CD0014EDB9 /* PAListConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PAListConfigurator.swift; sourceTree = "<group>"; };
 		17B7D94F2B3165AD0014EDB9 /* PokemonRelatedEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonRelatedEntity.swift; sourceTree = "<group>"; };
 		17B7D9512B3167260014EDB9 /* PokemonRelatedRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonRelatedRequest.swift; sourceTree = "<group>"; };
+		17B7D9572B317B880014EDB9 /* AuthToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthToken.swift; sourceTree = "<group>"; };
+		17B7D9592B317F090014EDB9 /* JailbrokenDetection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JailbrokenDetection.swift; sourceTree = "<group>"; };
+		17B7D95B2B3180F50014EDB9 /* Crypto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crypto.swift; sourceTree = "<group>"; };
+		17B7D9602B31823D0014EDB9 /* AuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +117,7 @@
 			files = (
 				17B7D9552B316CE50014EDB9 /* SDWebImage in Frameworks */,
 				17B7D9272B3138950014EDB9 /* Alamofire in Frameworks */,
+				17B7D95F2B31812F0014EDB9 /* CryptoSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,6 +161,7 @@
 		17B7D8DA2B31361E0014EDB9 /* PokeApiApp */ = {
 			isa = PBXGroup;
 			children = (
+				17B7D9562B317B770014EDB9 /* Util */,
 				17B7D93D2B3143A90014EDB9 /* Repository */,
 				17B7D9242B3138410014EDB9 /* Entity */,
 				17B7D9422B31441C0014EDB9 /* Model */,
@@ -342,6 +353,7 @@
 			isa = PBXGroup;
 			children = (
 				17B7D93E2B3143C00014EDB9 /* PokemonRepository.swift */,
+				17B7D9602B31823D0014EDB9 /* AuthRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -371,6 +383,16 @@
 			path = Configurator;
 			sourceTree = "<group>";
 		};
+		17B7D9562B317B770014EDB9 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				17B7D9572B317B880014EDB9 /* AuthToken.swift */,
+				17B7D9592B317F090014EDB9 /* JailbrokenDetection.swift */,
+				17B7D95B2B3180F50014EDB9 /* Crypto.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -390,6 +412,7 @@
 			packageProductDependencies = (
 				17B7D9262B3138950014EDB9 /* Alamofire */,
 				17B7D9542B316CE50014EDB9 /* SDWebImage */,
+				17B7D95E2B31812F0014EDB9 /* CryptoSwift */,
 			);
 			productName = PokeApiApp;
 			productReference = 17B7D8D82B31361E0014EDB9 /* PokeApiApp.app */;
@@ -466,6 +489,7 @@
 			packageReferences = (
 				17B7D9252B3138950014EDB9 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				17B7D9532B316CE50014EDB9 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				17B7D95D2B31812F0014EDB9 /* XCRemoteSwiftPackageReference "CryptoSwift" */,
 			);
 			productRefGroup = 17B7D8D92B31361E0014EDB9 /* Products */;
 			projectDirPath = "";
@@ -515,12 +539,14 @@
 				17B7D9232B31373B0014EDB9 /* PADetailRouter.swift in Sources */,
 				17B7D93F2B3143C00014EDB9 /* PokemonRepository.swift in Sources */,
 				17B7D9352B313DC30014EDB9 /* ServiceDataSourceProtocol.swift in Sources */,
+				17B7D9582B317B880014EDB9 /* AuthToken.swift in Sources */,
 				17B7D94B2B3151BA0014EDB9 /* PADetailConfigurator.swift in Sources */,
 				17B7D9442B3144350014EDB9 /* PokemonModel.swift in Sources */,
 				17B7D91C2B3136F00014EDB9 /* PAListRouter.swift in Sources */,
 				17B7D9502B3165AD0014EDB9 /* PokemonRelatedEntity.swift in Sources */,
 				17B7D91F2B3137180014EDB9 /* PADetailViewController.swift in Sources */,
 				17B7D9412B3143D10014EDB9 /* PokemonInteractor.swift in Sources */,
+				17B7D95C2B3180F50014EDB9 /* Crypto.swift in Sources */,
 				17B7D9322B313B9C0014EDB9 /* PokemonListEntity.swift in Sources */,
 				17B7D9182B3136D20014EDB9 /* PAListViewController.swift in Sources */,
 				17B7D9482B3148CA0014EDB9 /* Interactor.swift in Sources */,
@@ -529,8 +555,10 @@
 				17B7D9462B31444E0014EDB9 /* PokemonDetailModel.swift in Sources */,
 				17B7D92C2B313A480014EDB9 /* RequestProtocol.swift in Sources */,
 				17B7D9522B3167260014EDB9 /* PokemonRelatedRequest.swift in Sources */,
+				17B7D95A2B317F090014EDB9 /* JailbrokenDetection.swift in Sources */,
 				17B7D93A2B313FEC0014EDB9 /* Configuration.swift in Sources */,
 				17B7D8DE2B31361E0014EDB9 /* SceneDelegate.swift in Sources */,
+				17B7D9612B31823D0014EDB9 /* AuthRepository.swift in Sources */,
 				17B7D9212B31372D0014EDB9 /* PADetailPresenter.swift in Sources */,
 				17B7D93C2B3140AA0014EDB9 /* Environment.swift in Sources */,
 				17B7D9302B313A9D0014EDB9 /* PokemonDetailRequest.swift in Sources */,
@@ -905,6 +933,14 @@
 				minimumVersion = 5.18.7;
 			};
 		};
+		17B7D95D2B31812F0014EDB9 /* XCRemoteSwiftPackageReference "CryptoSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/krzyzanowskim/CryptoSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.8.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -917,6 +953,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 17B7D9532B316CE50014EDB9 /* XCRemoteSwiftPackageReference "SDWebImage" */;
 			productName = SDWebImage;
+		};
+		17B7D95E2B31812F0014EDB9 /* CryptoSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 17B7D95D2B31812F0014EDB9 /* XCRemoteSwiftPackageReference "CryptoSwift" */;
+			productName = CryptoSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

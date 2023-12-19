@@ -16,7 +16,11 @@ class ServiceDataSource {
         let configurator = URLSessionConfiguration.default
         configurator.timeoutIntervalForRequest = 180
         configurator.timeoutIntervalForRequest = 180
-        self.sessionManager = Alamofire.Session()
+        let serverTrustPolicies = ServerTrustManager(evaluators: [
+            "pokeapi.co" : PinnedCertificatesTrustEvaluator()
+        ])
+       
+        self.sessionManager = Alamofire.Session(serverTrustManager: serverTrustPolicies)
     }
     
 }
